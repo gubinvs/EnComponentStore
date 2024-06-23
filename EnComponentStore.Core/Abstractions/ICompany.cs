@@ -6,35 +6,71 @@ namespace EnComponentStore.Core.Abstractions
     /// </summary>
     /// 
 
-
     interface ICompany
     {    
+        /// <summary>
+        /// Полное наименование компании
+        /// </summary>
+        string name { get; set; }
 
-    string name { get; set; }
+        /// <summary>
+        /// Роль компании в системе покупатель или поставщик
+        /// </summary>
+        string role { get; set; }
 
-    string role { get; set; }
+        /// <summary>
+        /// Сокращенное наименование компании
+        /// </summary>
+        string minName { get; set; }
 
-    string minName { get; set; }
+        /// <summary>
+        /// ИНН Компании
+        /// </summary>
+        string inn { get; set; } 
+    
+        /// <summary>
+        /// ОГРН Компании
+        /// </summary>
+        string ogrn { get; set; }
+    
+        /// <summary>
+        /// Юридический адрес компании
+        /// </summary>
+        string legalAddress { get; set; }
 
-    string inn { get; set; } 
+        /// <summary>
+        /// Почтовый адрес компании
+        /// </summary>
+        string mailingAddress { get; set; }
 
-    string ogrn { get; set; }
+        /// <summary>
+        /// Email Адрес компании
+        /// </summary>
+        string emailAddress { get; set; }
 
-    string legalAddress { get; set; }
+        /// <summary>
+        /// Телефон для связи компании
+        /// </summary>
+        string phone { get; set; }
 
-    string mailingAddress { get; set; }
+        /// <summary>
+        /// Должность руководителя, директор или генеральный директор
+        /// </summary>
+        string boss { get; set;}
+    
+        /// <summary>
+        /// ФИО руководителя
+        /// </summary>
+        string nameBoss  { get; set; }
 
-    string emailAddress { get; set; }
+        /// <summary>
+        /// БИК Банка компании
+        /// </summary>
+        string bikBank { get; set; }
 
-    string phone { get; set; }
-
-    string boss { get; set;}
-
-    string nameBoss  { get; set; }
-
-    string bikBank { get; set; }
-
+        /// <summary>
+    /// Расчетный счет в банке компании
+    /// </summary>
     string  accountBank { get; set; }
-
     }  
 }

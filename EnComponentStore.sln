@@ -5,11 +5,14 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnComponentStore.Api", "EnComponentStore.Api\EnComponentStore.Api.csproj", "{C75C08C9-45B3-4DD3-940D-F456DB666F9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnComponentStore.Core", "EnComponentStore.Core\EnComponentStore.Core.csproj", "{7644C918-7C8C-492E-9953-1B4182036C30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnComponentStore.Core", "EnComponentStore.Core\EnComponentStore.Core.csproj", "{7644C918-7C8C-492E-9953-1B4182036C30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnComponentStore.Application", "EnComponentStore.Application\EnComponentStore.Application.csproj", "{E10CCDFA-8006-4C1B-8D89-2B1BB6DF0CA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnComponentStore.Application", "EnComponentStore.Application\EnComponentStore.Application.csproj", "{E10CCDFA-8006-4C1B-8D89-2B1BB6DF0CA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnComponentStore.DataAccsess", "EnComponentStore.DataAccsess\EnComponentStore.DataAccsess.csproj", "{5E5BF867-6EA4-4CBB-92ED-B6B7027A73ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnComponentStore.DataAccsess", "EnComponentStore.DataAccsess\EnComponentStore.DataAccsess.csproj", "{5E5BF867-6EA4-4CBB-92ED-B6B7027A73ED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7644C918-7C8C-492E-9953-1B4182036C30} = {7644C918-7C8C-492E-9953-1B4182036C30}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -8,22 +8,34 @@ namespace EnComponentStore.Core.Abstractions
 
     interface IPriceNomenclature 
     {
-        // Идентификатор товара
+        /// <summary>
+        /// Идентификатор товара
+        /// </summary>
         Guid guidNomenclature {get; set;}
 
-        // Идентификатор поставщика
+        /// <summary>
+        /// Идентификатор поставщика
+        /// </summary>
         Guid guidProvider {get; set;}
 
-        // Минимальная цена по которой продовал данный товар поставщик
+        /// <summary>
+        /// Минимальная цена по которой продовал данный товар поставщик
+        /// </summary>
         int minPriceProvider {get; set;}
 
-        // Максималтная цена компании поставщика
+        /// <summary>
+        /// Максимальная цена компании поставщика
+        /// </summary>
         int maxPriceProvider {get; set;}
 
-        // Current Price offered by the service
+        /// <summary>
+        /// Текущая цена по которой продает поставщик
+        /// </summary>
         int currentPriceProvider {get; set;}
 
-        // Установленная цена продажи товара в сервисе
+        /// <summary>
+        /// Установленная цена продажи товара от сервиса
+        /// </summary>
         int offeredPrice {get; set;}
     }
 }

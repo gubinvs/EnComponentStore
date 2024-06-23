@@ -8,6 +8,9 @@ namespace EnComponentStore.Core.Abstractions
 
     interface IWarehouse
     {
+        /// <summary>
+        /// Название склада
+        /// </summary>
         string nameWarehouse {get; set;}
 
     }  

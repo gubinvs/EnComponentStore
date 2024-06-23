@@ -9,14 +9,19 @@ namespace EnComponentStore.Core.Abstractions
 
     interface IDelivery
     {
-        // Срок доставки в днях
+        /// <summary>
+        /// Срок доставки в днях
+        /// </summary>
         int dayDelivery { get; set;}
 
-        // Наименование службы доставки
+        /// <summary>
+        /// Наименование службы доставки
+        /// </summary>
         string nameDelivery {get; set;}
 
-    
-        // Стоимость доставки
+        /// <summary>
+        /// Стоимость доставки
+        /// </summary>
         int priceDelivery {get; set;}
 
     }
