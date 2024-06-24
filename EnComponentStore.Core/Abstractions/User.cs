@@ -1,13 +1,12 @@
 ﻿
-namespace EnComponentStore.Core.Abstractions;
+namespace EnComponentStore.Core.Abstractions
 {
-    /// <summary>
-    /// Параметры пользоваталя в системе
-    /// </summary>
-    /// 
-
-    internal abstract class User
+    abstract class User
     {
+        /// <summary>
+        /// Параметры пользоваталя в системе
+        /// </summary>
+        /// 
         public string str = string.Empty;
 
         private User(string name, string login, string password, string email, string position)
@@ -20,18 +19,6 @@ namespace EnComponentStore.Core.Abstractions;
             this.position = position;
         }
 
-
-        public (User user, string str) AddUser (string name, string login, string password, string email, string position)
-        {
-            // Прописать проверки на соответствие ,если проверка на соответствие не пройдена, заполнить строку данными.
-            if (name != "d") { str = "kkasjkasjd"; }
-
-            User user = new User(name, login, password, email, position);
-
-            // Возвращает созданного пользователя и состояние строки. если была ошибка строка будет заполнена.
-            return (user, str);
-        }
-
         /// <summary>
         /// Идентификатор GUID пользователя
         /// </summary>
@@ -40,27 +27,27 @@ namespace EnComponentStore.Core.Abstractions;
         /// <summary>
         /// Имя пользователя
         /// </summary>
-        string name { get; }
+        string name { get; set; }
 
         /// <summary>
         /// Логин пользователя
         /// </summary>
-        string login { get; }
+        string login { get; set; }
 
         /// <summary>
         /// Пароль пользователя
         /// </summary>
-        string password { get; }
+        string password { get; set; }
 
         /// <summary>
         /// Email Пользователя
         /// </summary>
-        string email { get; }
+        string email { get; set; }
 
         /// <summary>
         ///  Должность пользователя
         /// </summary>
-        string position { get; }
+        string position { get; set; }
 
     };
 };
