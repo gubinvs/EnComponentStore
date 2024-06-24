@@ -2,75 +2,76 @@
 namespace EnComponentStore.Core.Abstractions
 {
     /// <summary>
-    /// Интерфейс с описанием компаний
+    /// Абстрактный класс описавыющий компанию
     /// </summary>
     /// 
 
-    interface ICompany
+    abstract class Company
     {    
+        public string id { get; }
         /// <summary>
         /// Полное наименование компании
         /// </summary>
-        string name { get;}
+        public string name { get; }
 
         /// <summary>
         /// Роль компании в системе покупатель или поставщик
         /// </summary>
-        string role { get;}
+        public string role { get; }
 
         /// <summary>
         /// Сокращенное наименование компании
         /// </summary>
-        string minName { get; set; }
+        public string minName { get; }
 
         /// <summary>
         /// ИНН Компании
         /// </summary>
-        string inn { get; set; } 
+        public string inn { get; } 
     
         /// <summary>
         /// ОГРН Компании
         /// </summary>
-        string ogrn { get; set; }
+        public string ogrn { get; }
     
         /// <summary>
         /// Юридический адрес компании
         /// </summary>
-        string legalAddress { get; set; }
+        public string legalAddress { get; }
 
         /// <summary>
         /// Почтовый адрес компании
         /// </summary>
-        string mailingAddress { get; set; }
+        public string mailingAddress { get; }
 
         /// <summary>
         /// Email Адрес компании
         /// </summary>
-        string emailAddress { get; set; }
+        public string emailAddress { get;}
 
         /// <summary>
         /// Телефон для связи компании
         /// </summary>
-        string phone { get; set; }
+        public string phone { get; }
 
         /// <summary>
         /// Должность руководителя, директор или генеральный директор
         /// </summary>
-        string boss { get; set;}
+        public string boss { get; }
     
         /// <summary>
         /// ФИО руководителя
         /// </summary>
-        string nameBoss  { get; set; }
+        public string nameBoss  { get; }
 
         /// <summary>
         /// БИК Банка компании
         /// </summary>
-        string bikBank { get; set; }
+        public string bikBank { get; }
 
         /// <summary>
-    /// Расчетный счет в банке компании
-    /// </summary>
-    string  accountBank { get; set; }
+        /// Расчетный счет в банке компании
+        /// </summary>
+        public string  accountBank { get; }
     }  
 }
