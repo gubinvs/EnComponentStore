@@ -11,12 +11,12 @@ namespace EnComponentStore.Core.Abstractions
         /// <summary>
         /// Полное наименование компании
         /// </summary>
-        string name { get; set; }
+        string name { get;}
 
         /// <summary>
         /// Роль компании в системе покупатель или поставщик
         /// </summary>
-        string role { get; set; }
+        string role { get;}
 
         /// <summary>
         /// Сокращенное наименование компании
