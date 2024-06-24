@@ -10,8 +10,6 @@
     <Folder Include="Configurations\" />
     <Folder Include="DbContext\" />
     <Folder Include="Entites\" />
-    <Folder Include="Migrations\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -14,8 +14,4 @@
     <ProjectReference Include="..\EnComponentStore.DataAccsess\EnComponentStore.DataAccsess.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
 </Project>
