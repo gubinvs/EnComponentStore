@@ -7,11 +7,18 @@ namespace EnComponentStore.Core.Abstractions
         /// Параметры пользоваталя в системе
         /// </summary>
         /// 
-        public string str = string.Empty;
+
+
+        public string str  = string.Empty;
+
+        /// <summary>
+        /// Константа с параметром длины символов в поле
+        /// </summary>
+        public const MAXIMUM_TEXT_LENGTH  = 255;
 
         private User(string name, string login, string password, string email, string position)
         {
-            this.id = Guid.NewGuid().ToString();
+            this.id = Guid.NewGuid();
             this.name = name;
             this.login = login;
             this.password = password;
@@ -22,7 +29,7 @@ namespace EnComponentStore.Core.Abstractions
         /// <summary>
         /// Идентификатор GUID пользователя
         /// </summary>
-        string id { get; set; }
+        Guid id { get; set; }
 
         /// <summary>
         /// Имя пользователя
