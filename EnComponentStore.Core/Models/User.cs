@@ -28,32 +28,32 @@ namespace EnComponentStore.Core.Abstractions
         /// <summary>
         /// Идентификатор GUID пользователя
         /// </summary>
-        Guid id { get; }
+        Guid id { get; set;}
 
         /// <summary>
         /// Имя пользователя
         /// </summary>
-        string name { get; } = string.Empty;
+        string name { get; set;} = string.Empty;
 
         /// <summary>
         /// Логин пользователя
         /// </summary>
-        string login { get; } = string.Empty;
+        string login { get; set;} = string.Empty;
 
         /// <summary>
         /// Пароль пользователя
         /// </summary>
-        string password { get; } = string.Empty;
+        string password { get; set;} = string.Empty;
 
         /// <summary>
         /// Email Пользователя
         /// </summary>
-        string email { get; } = string.Empty;
+        string email { get; set;} = string.Empty;
 
         /// <summary>
         ///  Должность пользователя
         /// </summary>
-        string position { get; } = string.Empty;
+        string position { get; set;} = string.Empty;
 
         /// Метод проверяет заполнение формы и создает экземпляр класса, в случае не заполненного поля возвращает строку с информацией о незаполненном поле, в случае
         /// корректного заполнения полей вернет пустую строку и заполненный экземпляр класса  <summary>
