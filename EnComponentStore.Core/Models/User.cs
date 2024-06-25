@@ -65,7 +65,7 @@ namespace EnComponentStore.Core.Abstractions
         /// <param name="email">E-mail пользователя</param>
         /// <param name="position">Должность пользователя</param>
         /// 
-        public static (string str, User user) Create(string name, string login, string password, string email, string position)
+        public  (string str, User user) Create(string name, string login, string password, string email, string position)
         {
             /// IsNullOrEmpty - если принимаемая строка пустая или количество символов больше константы
             if (string.IsNullOrEmpty(name) || name.Length > MAXIMUM_TEXT_LENGTH)
