@@ -1,5 +1,5 @@
 ﻿
-namespace EnComponentStore.Core.Abstractions
+namespace EnComponentStore.Core.Models
 {
     public class User
     {
@@ -17,43 +17,43 @@ namespace EnComponentStore.Core.Abstractions
 
         private User(string name, string login, string password, string email, string position)
         {
-            this.id = Guid.NewGuid();
-            this.name = name;
-            this.login = login;
-            this.password = password;
-            this.email = email;
-            this.position = position;
+            this.Id = Guid.NewGuid();
+            this.Name = name;
+            this.Login = login;
+            this.Password = password;
+            this.Email = email;
+            this.Position = position;
         }
 
         /// <summary>
         /// Идентификатор GUID пользователя
         /// </summary>
-        Guid id { get; set;}
+        Guid Id { get; set;}
 
         /// <summary>
         /// Имя пользователя
         /// </summary>
-        string name { get; set;} = string.Empty;
+        string Name { get; set;} = string.Empty;
 
         /// <summary>
         /// Логин пользователя
         /// </summary>
-        string login { get; set;} = string.Empty;
+        string Login { get; set;} = string.Empty;
 
         /// <summary>
         /// Пароль пользователя
         /// </summary>
-        string password { get; set;} = string.Empty;
+        string Password { get; set;} = string.Empty;
 
         /// <summary>
         /// Email Пользователя
         /// </summary>
-        string email { get; set;} = string.Empty;
+        string Email { get; set;} = string.Empty;
 
         /// <summary>
         ///  Должность пользователя
         /// </summary>
-        string position { get; set;} = string.Empty;
+        string Position { get; set;} = string.Empty;
 
         /// Метод проверяет заполнение формы и создает экземпляр класса, в случае не заполненного поля возвращает строку с информацией о незаполненном поле, в случае
         /// корректного заполнения полей вернет пустую строку и заполненный экземпляр класса  <summary>
