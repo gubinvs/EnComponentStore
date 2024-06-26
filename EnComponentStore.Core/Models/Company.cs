@@ -45,74 +45,74 @@ namespace EnComponentStore.Core.Models
         /// <summary>
         /// Полное наименование компании
         /// </summary>
-        public string Name { get; set;}= string.Empty;
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// Роль компании в системе покупатель или поставщик
         /// </summary>
-        public string Role { get; set;}= string.Empty;
+        public string Role { get; set; } = string.Empty;
 
         /// <summary>
         /// Сокращенное наименование компании
         /// </summary>
-        public string MinName { get; set;}= string.Empty;
+        public string MinName { get; set; } = string.Empty;
 
         /// <summary>
         /// ИНН Компании
         /// </summary>
-        public string Inn { get; set;}= string.Empty; 
-    
+        public string Inn { get; set; } = string.Empty;
+
         /// <summary>
         /// ОГРН Компании
         /// </summary>
-        public string Ogrn { get; set;}= string.Empty;
-    
+        public string Ogrn { get; set; } = string.Empty;
+
         /// <summary>
         /// Юридический адрес компании
         /// </summary>
-        public string LegalAddress { get; set;}= string.Empty;
+        public string LegalAddress { get; set; } = string.Empty;
 
         /// <summary>
         /// Почтовый адрес компании
         /// </summary>
-        public string MailingAddress { get; set;}= string.Empty;
+        public string MailingAddress { get; set; } = string.Empty;
 
         /// <summary>
         /// Email Адрес компании
         /// </summary>
-        public string EmailAddress { get; set;}= string.Empty;
+        public string EmailAddress { get; set; } = string.Empty;
 
         /// <summary>
         /// Телефон для связи компании
         /// </summary>
-        public string Phone { get; set; }= string.Empty;
+        public string Phone { get; set; } = string.Empty;
 
         /// <summary>
         /// Должность руководителя, директор или генеральный директор
         /// </summary>
-        public string Boss { get; set; }= string.Empty;
-    
+        public string Boss { get; set; } = string.Empty;
+
         /// <summary>
         /// ФИО руководителя
         /// </summary>
-        public string NameBoss  { get; set;}= string.Empty;
+        public string NameBoss { get; set; } = string.Empty;
 
         /// <summary>
         /// БИК Банка компании
         /// </summary>
-        public string BikBank { get; set;}= string.Empty;
+        public string BikBank { get; set; } = string.Empty;
 
         /// <summary>
         /// Расчетный счет в банке компании
         /// </summary>
-        public string  AccountBank { get; set;} = string.Empty;
+        public string AccountBank { get; set; } = string.Empty;
 
         /// <summary>
         /// Метод проверяет заполнение формы и создает экземпляр класса, в случае не заполненного поля возвращает строку с информацией о незаполненном поле, в случае
         /// корректного заполнения полей вернет пустую строку и заполненный экземпляр класса  <summary>
         /// Метод проверяет заполнение формы и создает экземпляр класса, в случае не заполненного поля возвращает строку с информацией о незаполненном поле, в случае
         /// </summary>
- 
+
         /// 
         public (string str, Company company) Create(
                                                 string name,
@@ -132,51 +132,51 @@ namespace EnComponentStore.Core.Models
             /// IsNullOrEmpty - если принимаемая строка пустая или количество символов больше константы
             if (string.IsNullOrEmpty(name) || name.Length > MAXIMUM_TEXT_LENGTH)
             {
-                str = "Имя пользователя не указано или длина символов более 255 символов";
+                str = "Поле, наименование компании, не указано или длина символов более 255 символов";
             }
             else if (string.IsNullOrEmpty(minName) || minName.Length > MAXIMUM_TEXT_LENGTH)
             {
-                str = "Логин пользователя не указан или его длина более 255 символов";
+                str = "Сокращенное наменование компании не указано или его длина более 255 символов";
             }
             else if (string.IsNullOrEmpty(inn) || inn.Length > MAXIMUM_TEXT_LENGTH)
             {
-                str = "Логин пользователя не указан или его длина более 255 символов";
+                str = "ИНН компании не указан или его длина более 255 символов";
             }
             else if (string.IsNullOrEmpty(ogrn) || ogrn.Length > MAXIMUM_TEXT_LENGTH)
             {
-                str = "Логин пользователя не указан или его длина более 255 символов";
+                str = "ОГРН компании не указан или его длина более 255 символов";
             }
             else if (string.IsNullOrEmpty(legalAddress) || legalAddress.Length > MAXIMUM_TEXT_LENGTH)
             {
-                str = "Логин пользователя не указан или его длина более 255 символов";
+                str = "Юридический адрес компании не указан или его длина более 255 символов";
             }
             else if (string.IsNullOrEmpty(mailingAddress) || mailingAddress.Length > MAXIMUM_TEXT_LENGTH)
             {
-                str = "Пароль пользователя не указан или его длина более 255 символов";
+                str = "Почтовый адрес компании не указан или его длина более 255 символов";
             }
             else if (string.IsNullOrEmpty(emailAddress) || emailAddress.Length > MAXIMUM_TEXT_LENGTH)
             {
-                str = "E-mail пользователя не указан или его длина более 255 символов";
+                str = "E-mail компании не указан или его длина более 255 символов";
             }
             else if (string.IsNullOrEmpty(phone) || phone.Length > MAXIMUM_TEXT_LENGTH)
             {
-                str = "Логин пользователя не указан или его длина более 255 символов";
+                str = "Телефон компании не указан или его длина более 255 символов";
             }
             else if (string.IsNullOrEmpty(boss) || boss.Length > MAXIMUM_TEXT_LENGTH)
             {
-                str = "Логин пользователя не указан или его длина более 255 символов";
+                str = "Должность руководителя компании не указана или её длина более 255 символов";
             }
             else if (string.IsNullOrEmpty(nameBoss) || nameBoss.Length > MAXIMUM_TEXT_LENGTH)
             {
-                str = "Логин пользователя не указан или его длина более 255 символов";
+                str = "ФИО руководителя компании не указаны или их длина более 255 символов";
             }
             else if (bikBank.Length > MAXIMUM_TEXT_LENGTH)
             {
-                str = "Должность пользователя содержит более 255 символов";
+                str = "БИК Банка получателя содержит более 255 символов";
             }
             else if (accountBank.Length > MAXIMUM_TEXT_LENGTH)
             {
-                str = "Должность пользователя содержит более 255 символов";
+                str = "Расчетный счет компании содержит более 255 символов";
             };
 
             Company company = new Company(
@@ -196,5 +196,5 @@ namespace EnComponentStore.Core.Models
 
             return (str, company);
         }
-    }  
+    }
 }

@@ -1,36 +1,42 @@
-namespace EnComponentStore.Core.Abstractions
+namespace EnComponentStore.Core.Models
 {
     /// <summary>
-    /// Ссылки на картинки и страницу номенклатуры
+    /// Ссылки на картинки и страницу номенклатуры товара
     /// используется для собственного API
     /// </summary>
     /// 
 
-
-    interface IOptionsNomenclature 
+    public class OptionsLinkPage
     {
-        
+        public OptionsLinkPage(string linkPage, string linkImgPage, string linkImgCard, string linkImgBasket)
+        {
+            this.LinkPage = linkPage;
+            this.LinkImgPage = linkImgPage; 
+            this.LinkImgCard = linkImgCard; 
+            this.LinkImgBasket = linkImgBasket;
+        }
+
         /// <summary>
         /// Ссылка на страницу с описанием товара (номенклатуры)
         /// </summary>
-        string linkPage { get; set;}
+        string LinkPage { get; set; }
 
         /// <summary>
         /// Ссылка на картинку с изображением для страницы с описанием товара (номенклатуры)
         /// </summary>
-        string linkImgPage {get; set;}
+        string LinkImgPage { get; set; }
 
         /// <summary>
         /// Ссылка на картинку для карточки товара (номенклатуры)
         /// </summary>
-        string linkImgCard {get; set;}
+        string LinkImgCard { get; set; }
 
         /// <summary>
         /// Ссылка на картинку для иконки в строке заказа на странице корзина
         /// </summary>
-        string linkImgBasket {get; set;}
+        string LinkImgBasket { get; set; }
 
-    } 
+    }
 }
 
 

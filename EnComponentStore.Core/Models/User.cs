@@ -4,7 +4,6 @@ namespace EnComponentStore.Core.Models
 {
     class User : CheckItem
     {
-
         private User(string name, string login, string password, string email, string position)
         {
             this.Id = Guid.NewGuid();
