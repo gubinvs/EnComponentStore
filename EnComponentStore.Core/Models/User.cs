@@ -1,19 +1,9 @@
-﻿
+﻿using EnComponentStore.Core.Abstractions;
+
 namespace EnComponentStore.Core.Models
 {
-    public class User
+    class User : CheckItem
     {
-        /// <summary>
-        /// Класс пользоваталя системы
-        /// </summary>
-        /// 
-
-        public string str  = string.Empty;
-
-        /// <summary>
-        /// Константа с параметром длины символов в поле
-        /// </summary>
-        public const int MAXIMUM_TEXT_LENGTH = 255;
 
         private User(string name, string login, string password, string email, string position)
         {
@@ -24,6 +14,7 @@ namespace EnComponentStore.Core.Models
             this.Email = email;
             this.Position = position;
         }
+
 
         /// <summary>
         /// Идентификатор GUID пользователя
