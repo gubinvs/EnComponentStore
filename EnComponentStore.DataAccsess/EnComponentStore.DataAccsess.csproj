@@ -9,7 +9,7 @@
   <ItemGroup>
     <Folder Include="Configurations\" />
     <Folder Include="DbContext\" />
-    <Folder Include="Entites\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
   <ItemGroup>
